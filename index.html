@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manjula's Personal Budget Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        input, select, button {
+            margin: 5px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Personal Budget Tracker</h1>
+        <nav>
+            <a href="#">Add Income/Expense</a> |
+            <a href="#">View Budget Summary</a>
+        </nav>
+    </header>
+
+    <!-- Introduction Section -->
+    <section class="container">
+        <h2>Welcome to the Manjula's Personal Budget Tracker</h2>
+        <p>This tracker helps me manage my monthly income and expenses. we can add new entries and view a detailed summary of my budget.</p>
+    </section>
+
+    <!-- Form to Add Income/Expense -->
+    <section class="container">
+        <h2>Add New Income or Expense</h2>
+        <form>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Enter amount">
+            
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="food">Food</option>
+                <option value="salary">Salary</option>
+                <option value="savings">Savings</option>
+                <option value="housing">Housing</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <input type="text" id="description" placeholder="Enter description">
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date">
+
+            <label>Type:</label>
+            <input type="radio" name="type" value="income"> Income
+            <input type="radio" name="type" value="expense"> Expense
+            
+            <button type="submit">Add Entry</button>
+        </form>
+    </section>
+
+    <!-- Budget Summary Table -->
+    <section class="container">
+        <h2>Budget Summary</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Amount</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Food</td>
+                    <td>3000</td>
+                    <td>Groceries for the week</td>
+                    <td>Completed</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                
+                <tr>
+                    <td>Salary</td>
+                    <td>25000</td>
+                    <td>Monthly salary payment</td>
+                    <td>Completed</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                <tr>
+                    <td>Savings</td>
+                    <td>12000</td>
+                    <td>Emergency fund deposit</td>
+                    <td>Completed</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+                
+                
+                <tr>
+                    <td>Housing</td>
+                    <td>10000</td>
+                    <td>Maintenance fee</td>        
+                    <td>Pending</td>
+                    <td><button>Edit</button> <button>Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    
+</body>
+</html>
+
+
